@@ -36,16 +36,9 @@ class PlateMeas(object):
             if splitLine[0] == "ResidRadErrRMS":
                 self.ResidRadErrRMS = float(line.split()[2])
                 #print self.ResidRadErrRMS
-                
-    def array(self):
-        array = [self.plateID(), self.MeasDate(), self.ResidRadErrRMS()]
-        print array
-                    
-                
     
             
 plate1 = PlateMeas('/Users/tiffanyjansen/Documents/SDSSWork/examplefits.txt')
 #plate1.plateID()
 #plate1.MeasDate()
 #plate1.ResidRadErrRMS()
-plate1.array()
