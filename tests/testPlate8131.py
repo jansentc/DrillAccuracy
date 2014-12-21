@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 """Test for the plate 8131 measurement file
 """
 import sys
@@ -104,16 +103,14 @@ class TestPlate8131(unittest.TestCase):
             116.670, 75.657, -181.334, -283.440, -293.342,
         ]
 
-        i = 0
         for nomX_i, dataTableNomX_i in itertools.izip(nomX, self.parser.dataTable.nomX):
             # compare each element in list
-            # increment i# izip iterates over multiple lists at once, eg:
+            # izip iterates over multiple lists at once, eg:
             # izip([x1,x2,x3],[y1,y2,y3]):
             #   iter 1: x1, y1
             #   iter 2: x2, y2
             #   iter 3: x3, y3
-            self.assertAlmostEqual(nomX_i, dataTableNomX_i, "failed on list index %i"%i)
-            i += 1 # increment i
+            self.assertAlmostEqual(nomX_i, dataTableNomX_i)
 
     def testNomY(self):
         nomY = [
@@ -129,10 +126,8 @@ class TestPlate8131(unittest.TestCase):
         ]
 
 
-        i = 0
         for nomY_i, dataTableNomY_i in itertools.izip(nomY, self.parser.dataTable.nomY):
-            self.assertAlmostEqual(nomY_i, dataTableNomY_i, "failed on list index %i"%i)
-            i += 1 # increment i
+            self.assertAlmostEqual(nomY_i, dataTableNomY_i)
 
     def testMeasX(self):
         measX = [
@@ -147,10 +142,9 @@ class TestPlate8131(unittest.TestCase):
             215.747, 133.804, 116.652, 75.610, -181.514, -283.556, -293.427
         ]
 
-        i = 0
+
         for measX_i, dataTablemeasX_i in itertools.izip(measX, self.parser.dataTable.measX):
-            self.assertAlmostEqual(measX_i, dataTablemeasX_i, "failed on list index %i"%i)
-            i += 1 # increment i
+            self.assertAlmostEqual(measX_i, dataTablemeasX_i)
 
     def testMeasY(self):
         measY = [
@@ -166,10 +160,8 @@ class TestPlate8131(unittest.TestCase):
         ]
 
 
-        i = 0
         for measY_i, dataTablemeasY_i in itertools.izip(measY, self.parser.dataTable.measY):
-            self.assertAlmostEqual(measY_i, dataTablemeasY_i, "failed on list index %i"%i)
-            i += 1 # increment i
+            self.assertAlmostEqual(measY_i, dataTablemeasY_i)
 
     def testResidX(self):
         residX = [
@@ -186,10 +178,8 @@ class TestPlate8131(unittest.TestCase):
         ]
 
 
-        i = 0
         for residX_i, dataTableresidX_i in itertools.izip(residX, self.parser.dataTable.residX):
-            self.assertAlmostEqual(residX_i, dataTableresidX_i, "failed on list index %i"%i)
-            i += 1 # increment i
+            self.assertAlmostEqual(residX_i, dataTableresidX_i)
 
     def testResidY(self):
         residY = [
@@ -205,10 +195,8 @@ class TestPlate8131(unittest.TestCase):
         ]
 
 
-        i = 0
         for residY_i, dataTableresidY_i in itertools.izip(residY, self.parser.dataTable.residY):
-            self.assertAlmostEqual(residY_i, dataTableresidY_i, "failed on list index %i"%i)
-            i += 1 # increment i
+            self.assertAlmostEqual(residY_i, dataTableresidY_i)
 
     def testResidRad(self):
         residRad = [
@@ -224,10 +212,8 @@ class TestPlate8131(unittest.TestCase):
         ]
 
 
-        i = 0
         for residRad_i, dataTableresidRad_i in itertools.izip(residRad, self.parser.dataTable.residRad):
-            self.assertAlmostEqual(residRad_i, dataTableresidRad_i, "failed on list index %i"%i)
-            i += 1 # increment i
+            self.assertAlmostEqual(residRad_i, dataTableresidRad_i)
 
     def testNomDia(self):
         nomDia = [
@@ -243,10 +229,8 @@ class TestPlate8131(unittest.TestCase):
         ]
 
 
-        i = 0
         for nomDia_i, dataTablenomDia_i in itertools.izip(nomDia, self.parser.dataTable.nomDia):
-            self.assertAlmostEqual(nomDia_i, dataTablenomDia_i, "failed on list index %i"%i)
-            i += 1 # increment i
+            self.assertAlmostEqual(nomDia_i, dataTablenomDia_i)
 
     def testDiaErr(self):
         diaErr = [
@@ -262,10 +246,8 @@ class TestPlate8131(unittest.TestCase):
         ]
 
 
-        i = 0
         for diaErr_i, dataTablediaErr_i in itertools.izip(diaErr, self.parser.dataTable.diaErr):
-            self.assertAlmostEqual(diaErr_i, dataTablediaErr_i, "failed on list index %i"%i)
-            i += 1 # increment i
+            self.assertAlmostEqual(diaErr_i, dataTablediaErr_i)
 
     def testQPResidX(self):
         qpResidX = [
@@ -281,10 +263,8 @@ class TestPlate8131(unittest.TestCase):
         ]
 
 
-        i = 0
         for qpResidX_i, dataTableqpResidX_i in itertools.izip(qpResidX, self.parser.dataTable.qpResidX):
-            self.assertAlmostEqual(qpResidX_i, dataTableqpResidX_i, "failed on list index %i"%i)
-            i += 1 # increment i
+            self.assertAlmostEqual(qpResidX_i, dataTableqpResidX_i)
 
     def testQPResidY(self):
         qpResidY = [
@@ -302,10 +282,8 @@ class TestPlate8131(unittest.TestCase):
         ]
 
 
-        i = 0
         for qpResidY_i, dataTableqpResidY_i in itertools.izip(qpResidY, self.parser.dataTable.qpResidY):
-            self.assertAlmostEqual(qpResidY_i, dataTableqpResidY_i, "failed on list index %i"%i)
-            i += 1 # increment i
+            self.assertAlmostEqual(qpResidY_i, dataTableqpResidY_i)
 
     def testQPResidRad(self):
         qpResidRad = [
@@ -321,10 +299,8 @@ class TestPlate8131(unittest.TestCase):
         ]
 
 
-        i = 0
         for qpResidRad_i, dataTableqpResidRad_i in itertools.izip(qpResidRad, self.parser.dataTable.qpResidRad):
-            self.assertAlmostEqual(qpResidRad_i, dataTableqpResidRad_i, "failed on list index %i"%i)
-            i += 1 # increment i
+            self.assertAlmostEqual(qpResidRad_i, dataTableqpResidRad_i)
 
 if __name__ == '__main__':
     # this is how to automatically run the unittests.
