@@ -41,7 +41,7 @@ class PlateMeas(object):
                 #print self.ResidRadErrRMS
 
 
-plate1 = PlateMeas('/Users/tiffanyjansen/Documents/SDSSWork/examplefits.txt')
+# plate1 = PlateMeas('/Users/tiffanyjansen/Documents/SDSSWork/examplefits.txt')
 #plate1.plateID()
 #plate1.MeasDate()
 #plate1.ResidRadErrRMS()
